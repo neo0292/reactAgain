@@ -6,6 +6,7 @@ import MyComp from "./MyComp"
 
 function App() {
   const [counter, setCounter] = useState(0);
+  const [color, setColor] = useState('red');
   
 const increaseCounter = () =>{
   if (counter === 20) {
@@ -23,10 +24,11 @@ const decreaseCounter = () =>{
 
   return (
    <>
-   <h1>Counter: {counter}</h1>
-   <button onClick={increaseCounter}>Increase Counter</button>
+   <h1 className='bg-green-700'>Counter: {counter}</h1>
+   <button className='bg-red-400' onClick={increaseCounter}>Increase Counter</button>
+   
    <br /> <br />
-   <button onClick={decreaseCounter}>Decrease Counter</button>
+   <button style= {{backgroundColor: color}} onClick={decreaseCounter}>Decrease Counter</button>
    </>
   )
 }
